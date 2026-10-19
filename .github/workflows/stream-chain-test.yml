@@ -154,35 +154,22 @@ jobs:
           remaining = state.get("remaining", [])
           cycle = state.get("cycle", 1)
 
-          # Remove invalid entries from state if playlist.json changed.
+          # Remove invalid entries and duplicate URLs if playlist.json changed.
+          master = list(dict.fromkeys(master))
           master_set = set(master)
-          remaining = [x for x in remaining if x in master_set]
+          remaining = list(dict.fromkeys(x for x in remaining if x in master_set))
 
-          # If the current cycle has fewer than 10 videos remaining,
-          # finish it and continue filling the block from a new random cycle.
-          if len(remaining) >= 10:
-              selected = remaining[:10]
-              new_remaining = remaining[10:]
-              new_cycle = cycle
+          # Never mix two cycles in one Action.
+          # Use only videos left in the current cycle, even if fewer than 10 remain.
+          # Start a new shuffled cycle only when the previous cycle is exhausted.
+          if not remaining:
+              cycle += 1 if state.get("remaining") == [] and state.get("cycle", 1) > 0 else 0
+              remaining = list(master)
+              random.shuffle(remaining)
 
-          else:
-              selected = list(remaining)
-
-              used_in_new_cycle = set(selected)
-
-              new_cycle_pool = [
-                  x for x in master
-                  if x not in used_in_new_cycle
-              ]
-
-              random.shuffle(new_cycle_pool)
-
-              needed = 10 - len(selected)
-
-              selected.extend(new_cycle_pool[:needed])
-
-              new_remaining = new_cycle_pool[needed:]
-              new_cycle = cycle + 1
+          selected = remaining[:10]
+          new_remaining = remaining[10:]
+          new_cycle = cycle
 
           random.shuffle(selected)
 
@@ -203,7 +190,7 @@ jobs:
               )
 
           print("")
-          print("Selected 10 videos:")
+          print(f"Selected {len(selected)} videos:")
           for i, url in enumerate(selected, 1):
               print(f"{i:02d}. {url}")
 
