@@ -1,16 +1,6 @@
 {
   "cycle": 2,
   "remaining": [
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Demuja%20-%20All%20Hell%20Is%20Breaking%20Loose%20%28Original%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Glenn%20Underground%20-%20Friendly%20Skys.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Gabriel%20Bouvet%20-%20Controversy.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Deepthoughts%20-%20Supertube%20%28Frankman%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Speakeasy%20-%20Allright%20%28Original%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Louis%20Benedetti%20Feat%20David%20Ruffin%20Jr%20-%20Show%20You%20My%20Love%20%28Dub%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Leroy%20Hanghofer%20-%20Pin%20%28Jacques%20Lu%20Cont%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Unai%20-%20Soulbandit.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Charles%20Webster%20-%20Your%20Life%20%28Vocal%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Batidos%20-%20Tango%20Sed%20%28Ron%20Trent%20Mix%29.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Classen%20Collective%20-%20Close%20To%20Greatness%20%28Who%20Took%20Away%20The%20Funk%20Mix%29.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Ian%20Pooley%20-%20The%20Allnighter%20%28Slam%20%60Counterplan%27%20Mix%29.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Guri%20-%20These%20Cold%20Days.mp4",
