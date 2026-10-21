@@ -1,13 +1,6 @@
 {
   "cycle": 2,
-  "remaining": [
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Slater%20Hogan%20%26%20John%20Larner%20-%20What%20You%20Need.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Ron%20Trent%20Feat.%20Tkumah%20Sadeek%20-%20In%20Time.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Soul%20Providers%20-%20Let%20The%20Sunshine%20In.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/G.U.%20-%20House%20Music%20Will%20Never%20Die%20%28G.U.%27s%20Cei-Bei%20.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Sendos%20Fuera%20-%20Pure%20Nervous%20%28The%20Timewriter%20Remix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Undercover%20Agency%20-%20Fire%20The%20Flame.mp4"
-  ],
+  "remaining": [],
   "known": [
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Afro%20Elements%20-%20Chocolat%20%28Mr%20Gone%27s%20Club%20Sandwich%29.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Akabu%20-Your%20Wildest%20Dreams%20%28Joey%20Negro%20Medusa%20Mix%29.mp4",
