@@ -1,16 +1,6 @@
 {
   "cycle": 4,
   "remaining": [
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Demuja%20-%20Berni%20Macht%20Blau%20%28Original%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Crusho%20-%20Someone%20To%20Love%20%28feat.%20Marilyn%20David%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Jamc%20Groove%20-%20Midnight%20%28Manuel%20Tur%20%26%20Dplay%20Remix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Da%20Funk%20-%20Follow%20Me%20%28Original%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Soldiers%20Of%20Twilight%20-%20No%20Fool%20%28Charles%20Webster%20Remix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Nick%20Holder%20-%20Paradise%20%28Salt%20City%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/David%20Panda%20Feat.%20Frosche%20-%20Loving%20Back%20%28Franck%27s%20Vox%20Rework%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Demuja%20-%20Dove%20%28Original%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Soul%20Creation%20-%20Natural%20High%20%28Piano%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Dj%20Rasoul%20-%20The%20Hump.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/The%20Plastic%20Avengers%20-%20Moondrops.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Harley%20%26%20Muscle%20-%20Open%20Society.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Onda%20-%20Happiness%20Is%20Free%20%28Original%20Mix%29.mp4",
