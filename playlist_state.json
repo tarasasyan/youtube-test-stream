@@ -1,12 +1,6 @@
 {
   "cycle": 6,
-  "remaining": [
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Ilya%20Santana%20-%20Wicked%20Sequence.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/John%20Dahlb%C3%A4ck%20-%20Take%20You%20There.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Matthew%20Boone%20feat.%20J.Vieria%20-%20Meu%20Coracao%20%28Lebocc.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Martinez%20-%20Dubwise.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Mike%20Vamp%20-%20Ghosts.mp4"
-  ],
+  "remaining": [],
   "known": [
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Afro%20Elements%20-%20Chocolat%20%28Mr%20Gone%27s%20Club%20Sandwich%29.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Akabu%20-Your%20Wildest%20Dreams%20%28Joey%20Negro%20Medusa%20Mix%29.mp4",
