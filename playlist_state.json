@@ -1,10 +1,6 @@
 {
   "cycle": 8,
-  "remaining": [
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Ben%20Watt%20-%20Just%20A%20Blip.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/The%20Discowboys%20-%20We%20Say%20It%20Again.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Classen%20Collective%20-%20Close%20To%20Greatness%20%28Who%20Took%20Away%20The%20Funk%20Mix%29.mp4"
-  ],
+  "remaining": [],
   "known": [
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Afro%20Elements%20-%20Chocolat%20%28Mr%20Gone%27s%20Club%20Sandwich%29.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Akabu%20-Your%20Wildest%20Dreams%20%28Joey%20Negro%20Medusa%20Mix%29.mp4",
