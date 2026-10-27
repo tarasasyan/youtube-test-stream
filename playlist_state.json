@@ -1,10 +1,6 @@
 {
   "cycle": 9,
-  "remaining": [
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Janet%20Rushmore%20-%20On%20My%20Own%20%28Shelter%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Demuja%20-%20Dove%20%28Original%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Masalatek%20-%20Mazume.mp4"
-  ],
+  "remaining": [],
   "known": [
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Afro%20Elements%20-%20Chocolat%20%28Mr%20Gone%27s%20Club%20Sandwich%29.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Akabu%20-Your%20Wildest%20Dreams%20%28Joey%20Negro%20Medusa%20Mix%29.mp4",
