@@ -1,19 +1,9 @@
 {
   "cycle": 9,
   "remaining": [
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Pino%20Shamlou%20-%20Black%20Forest%20%28Frankman%20Remix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Demuja%20-%20Dove%20%28Original%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Jamc%20Groove%20-%20Midnight%20%28Manuel%20Tur%20%26%20Dplay%20Remix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Wavetest%20-%20Ussi.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Cooccer%20-%20Art%20of%20funk%20%28Da%20Funk%27s%20Pop%20Art%20Dub%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Modernwalker%20-%20For%20Him%20For%20Her.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Miguel%20Migs%20-%20Make%20A%20Change%20%28Dubpusher%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Jon%20Silva%20-%20Music.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Janet%20Rushmore%20-%20On%20My%20Own%20%28Shelter%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Masalatek%20-%20Mazume.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Deep%20Sector%20-%20Rainbows.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Sian%20-%20R%20U%20Aware.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Shamlou%20-%20Big%20City%20Lights%20%28Clubmix%29.mp4"
+    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Demuja%20-%20Dove%20%28Original%20Mix%29.mp4",
+    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Masalatek%20-%20Mazume.mp4"
   ],
   "known": [
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Afro%20Elements%20-%20Chocolat%20%28Mr%20Gone%27s%20Club%20Sandwich%29.mp4",
