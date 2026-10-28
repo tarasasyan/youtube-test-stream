@@ -294,8 +294,16 @@ jobs:
 
       - name: Download and validate videos
         shell: bash
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           set -euo pipefail
+
+          if [ -z "${HF_TOKEN:-}" ]; then
+            echo "HF_TOKEN secret is empty or unavailable."
+            echo "Check repository Settings -> Secrets and variables -> Actions."
+            exit 1
+          fi
 
           python3 <<'PY'
           import json
@@ -313,6 +321,70 @@ jobs:
           print(f"Videos selected for download: {len(videos)}")
           PY
 
+          retry_after_seconds() {
+            python3 - "$1" <<'PY'
+          import email.utils
+          import sys
+          from datetime import datetime, timezone
+
+          path = sys.argv[1]
+          value = None
+          try:
+              with open(path, "r", encoding="latin-1") as f:
+                  for line in f:
+                      if line.lower().startswith("retry-after:"):
+                          value = line.split(":", 1)[1].strip()
+          except OSError:
+              pass
+
+          if not value:
+              print(0)
+              raise SystemExit
+
+          try:
+              seconds = int(value)
+          except ValueError:
+              try:
+                  dt = email.utils.parsedate_to_datetime(value)
+                  if dt.tzinfo is None:
+                      dt = dt.replace(tzinfo=timezone.utc)
+                  seconds = int((dt - datetime.now(timezone.utc)).total_seconds())
+              except Exception:
+                  seconds = 0
+
+          print(max(0, min(seconds, 900)))
+          PY
+          }
+
+          validate_media() {
+            local file="$1"
+            local duration_file="$2"
+
+            "$HOME/ffmpeg/bin/ffprobe" \
+              -v error \
+              -show_entries format=duration \
+              -of default=noprint_wrappers=1:nokey=1 \
+              "$file" > "$duration_file" || return 1
+
+            python3 -c \
+              'import sys; d=float(sys.argv[1]); sys.exit(0 if d > 0 else 1)' \
+              "$(cat "$duration_file")" || return 1
+
+            "$HOME/ffmpeg/bin/ffprobe" \
+              -v error \
+              -select_streams v:0 \
+              -show_entries stream=codec_type \
+              -of csv=p=0 \
+              "$file" | grep -q video || return 1
+
+            "$HOME/ffmpeg/bin/ffprobe" \
+              -v error \
+              -select_streams a:0 \
+              -show_entries stream=codec_type \
+              -of csv=p=0 \
+              "$file" | grep -q audio || return 1
+          }
+
           rm -f concat.txt
 
           while IFS='|' read -r NUMBER FILENAME URL; do
@@ -322,58 +394,65 @@ jobs:
             echo "========================================"
 
             SUCCESS=0
+            PART="${FILENAME}.part"
+            HEADERS="/tmp/hf_headers_${NUMBER}.txt"
 
-            for attempt in 1 2 3 4; do
-              echo "Download attempt $attempt/4"
+            for attempt in 1 2 3 4 5 6; do
+              echo "Download attempt $attempt/6"
+              rm -f "$FILENAME" "$PART" "$HEADERS"
+              HTTP_CODE="000"
+              CURL_CODE=0
 
-              rm -f "$FILENAME" "${FILENAME}.part"
-
-              if curl -fL \
-                --retry 2 \
-                --retry-all-errors \
-                --retry-delay 3 \
+              HTTP_CODE=$(curl -sS -L \
                 --connect-timeout 30 \
                 --max-time 1800 \
-                --progress-bar \
-                -o "$FILENAME.part" \
-                "$URL" &&
-                test -s "$FILENAME.part" &&
-                mv "$FILENAME.part" "$FILENAME"; then
+                --dump-header "$HEADERS" \
+                --output "$PART" \
+                --write-out "%{http_code}" \
+                -H "Authorization: Bearer ${HF_TOKEN}" \
+                "$URL") || CURL_CODE=$?
 
-                if "$HOME/ffmpeg/bin/ffprobe" \
-                  -v error \
-                  -show_entries format=duration \
-                  -of default=noprint_wrappers=1:nokey=1 \
-                  "$FILENAME" > /tmp/current_duration.txt &&
-                  python3 -c \
-                    'import sys; d=float(sys.argv[1]); sys.exit(0 if d > 0 else 1)' \
-                    "$(cat /tmp/current_duration.txt)" &&
-                  "$HOME/ffmpeg/bin/ffprobe" \
-                    -v error \
-                    -select_streams v:0 \
-                    -show_entries stream=codec_type \
-                    -of csv=p=0 \
-                    "$FILENAME" | grep -q video &&
-                  "$HOME/ffmpeg/bin/ffprobe" \
-                    -v error \
-                    -select_streams a:0 \
-                    -show_entries stream=codec_type \
-                    -of csv=p=0 \
-                    "$FILENAME" | grep -q audio; then
+              if [ "$CURL_CODE" -eq 0 ] && \
+                 [[ "$HTTP_CODE" =~ ^2[0-9][0-9]$ ]] && \
+                 test -s "$PART" && \
+                 mv "$PART" "$FILENAME"; then
 
+                if validate_media "$FILENAME" "/tmp/current_duration_${NUMBER}.txt"; then
                   SUCCESS=1
                   echo "Download and media validation successful."
                   break
                 fi
+
+                echo "Downloaded file failed media validation."
+                rm -f "$FILENAME" "$PART"
+                WAIT_SECONDS=10
+              else
+                echo "Download failed. HTTP status: $HTTP_CODE; curl exit: $CURL_CODE"
+                rm -f "$FILENAME" "$PART"
+
+                if [ "$HTTP_CODE" = "429" ]; then
+                  WAIT_SECONDS=$(retry_after_seconds "$HEADERS")
+                  if [ "$WAIT_SECONDS" -le 0 ]; then
+                    WAIT_SECONDS=$((60 * (2 ** (attempt - 1))))
+                  fi
+                  echo "Hugging Face rate limit (429). Waiting ${WAIT_SECONDS}s before retry."
+                elif [[ "$HTTP_CODE" =~ ^5[0-9][0-9]$ ]] || [ "$HTTP_CODE" = "000" ]; then
+                  WAIT_SECONDS=$((30 * (2 ** (attempt - 1))))
+                  if [ "$WAIT_SECONDS" -gt 600 ]; then WAIT_SECONDS=600; fi
+                  echo "Temporary server/network error. Waiting ${WAIT_SECONDS}s before retry."
+                else
+                  WAIT_SECONDS=$((10 * attempt))
+                  echo "Non-rate-limit HTTP error. Waiting ${WAIT_SECONDS}s before retry."
+                fi
               fi
 
-              echo "Download or validation failed."
-              rm -f "$FILENAME" "${FILENAME}.part"
-              sleep 5
+              if [ "$attempt" -lt 6 ]; then
+                sleep "$WAIT_SECONDS"
+              fi
             done
 
             if [ "$SUCCESS" -ne 1 ]; then
-              echo "ERROR: Video $NUMBER failed after 4 attempts."
+              echo "ERROR: Video $NUMBER failed after 6 attempts."
               exit 1
             fi
 
