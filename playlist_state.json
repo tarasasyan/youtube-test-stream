@@ -1,11 +1,6 @@
 {
   "cycle": 1,
-  "remaining": [
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Guri%20-%20These%20Cold%20Days.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/D.%20Diggler%20-%20Boogiemonster%20%28Remastered%20Version%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Schmoov%21%20-%20Destination.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Roberto%20Bardini%20-%20Never%20Dubitate.mp4"
-  ],
+  "remaining": [],
   "known": [
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Acid%20Ted%20-%20Ischia%20%28Original%20Mix%29.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Afro%20Elements%20-%20Chocolat%20%28Mr%20Gone%27s%20Club%20Sandwich%29.mp4",
