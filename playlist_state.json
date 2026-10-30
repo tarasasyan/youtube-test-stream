@@ -1,11 +1,6 @@
 {
   "cycle": 2,
-  "remaining": [
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Jiago%20-%20Satisfy.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Echonomist%20-%20Give%20%26%20Receive%20%28Revisited%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Rick%20Wade%20-%20Shamballa.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Harley%20%26%20Muscle%20-%20Deep%20Roots.mp4"
-  ],
+  "remaining": [],
   "known": [
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/2nd%20Shift%20-%20A%20Night%20In%20Bahia.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/2nd%20Shift%20-%20Knew%20Computer.mp4",
