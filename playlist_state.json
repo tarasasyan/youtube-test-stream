@@ -1,17 +1,7 @@
 {
   "cycle": 1,
   "remaining": [
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Axus%20-%20My%20Planet%20Rocks.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Jamie%20Anderson%20%26%20Owain%20K%20-%20Freerider%20%28Soul%20Minority%20Remix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Sendos%20Fuera%20-%20Pure%20Nervous%20%28The%20Timewriter%20Remix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Phaze%20Dee%20-%20The%20Underground.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Onda%20-%20Happiness%20Is%20Free%20%28Original%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Ben%20Watt%20-%20Just%20A%20Blip.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Lovetronic%20-%20You%20Are%20Love%20%28Petalpusher%20Dub%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Harley%20%26%20Muscle%20-%20Citylights.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Akabu%20-Your%20Wildest%20Dreams%20%28Joey%20Negro%20Medusa%20Mix%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Miguel%20Migs%20-%20Take%20Me%20To%20Paradise%20%28Atjazz%20Vocal%29.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Babak%20Shayan%20-%20Believer%20%28Frankman%20Remix%29.mp4"
+    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Ben%20Watt%20-%20Just%20A%20Blip.mp4"
   ],
   "known": [
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/2nd%20Shift%20-%20A%20Night%20In%20Bahia.mp4",
