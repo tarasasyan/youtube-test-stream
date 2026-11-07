@@ -1,16 +1,6 @@
 {
   "cycle": 1,
-  "remaining": [
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Luv%20City%20-%20Altitude.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Azuni-%20Matin%C3%A9e.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Dana%20-%20Come%20Back%20Home.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Schmoov%21%20-%20Destination.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Needs%20-%20Forever%20You.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Da%20Funk%20-%20Love%20From%20Above.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Silicone%20Soul%20-%20The%20Answer%20%28Miguel%20Migs%20Naked%20Voca.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Laurentius%20-%20Time.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/pothOles%20-%20Cat%20Valley.mp4"
-  ],
+  "remaining": [],
   "known": [
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/2nd%20Shift%20-%20A%20Night%20In%20Bahia.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/2nd%20Shift%20-%20Knew%20Computer.mp4",
