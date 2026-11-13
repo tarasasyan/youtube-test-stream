@@ -1,10 +1,6 @@
 {
   "cycle": 1,
-  "remaining": [
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/colosimo%20-%20Planet%20C.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Terry%20Lee%20Brown%20Junior%20-%20Ocean%20of%20Joy%20%28Danos%20Mel.%20.mp4",
-    "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/Discemi%20-%20When%20Mika%20Shot%20Puts.mp4"
-  ],
+  "remaining": [],
   "known": [
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/2nd%20Shift%20-%20A%20Night%20In%20Bahia.mp4",
     "https://huggingface.co/datasets/djSultry/YouTube/resolve/main/2nd%20Shift%20-%20Knew%20Computer.mp4",
